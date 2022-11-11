@@ -7,6 +7,8 @@ on:
 
 jobs:
   ok-to-test:
+    permissions:
+      pull-requests: write
     runs-on: ubuntu-latest
     # Only run for PRs, not issue comments
     if: ${{ github.event.issue.pull_request }}
